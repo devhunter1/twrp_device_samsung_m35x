@@ -96,3 +96,17 @@ subsystem dma_heap
 
 # CNSS
 /sys/class/devcoredump/devcd*    data    0660    wifi     system
+
+# parallel_restorecon_dir
+# Never include the "/sys/devices/platform/soc/1d84000.ufshc" path
+parallel_restorecon_dir /sys
+parallel_restorecon_dir /sys/devices
+parallel_restorecon_dir /sys/firmware
+parallel_restorecon_dir /sys/bus
+parallel_restorecon_dir /sys/class
+parallel_restorecon_dir /sys/fs
+parallel_restorecon_dir /sys/module
+parallel_restorecon_dir /sys/firmware/devicetree
+parallel_restorecon_dir /sys/devices/virtual
+parallel_restorecon_dir /sys/devices/platform
+parallel_restorecon_dir /sys/devices/platform/soc
